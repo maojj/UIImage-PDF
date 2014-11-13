@@ -74,8 +74,21 @@
 		CGPDFPageRef page1 = CGPDFDocumentGetPage( pdf, page );
 		
 		rect = CGPDFPageGetBoxRect( page1, kCGPDFCropBox );
-		
-		CGPDFDocumentRelease( pdf );
+
+        int rotate = CGPDFPageGetRotationAngle(page1);
+
+        CGPDFDocumentRelease( pdf );
+
+        switch (rotate) {
+            case 90:
+            case 270:
+            case -90:
+                return CGRectMake(rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
+                break;
+            default:
+                return rect;
+                // for 0, 180, -180
+        }
 	}
     
     return rect;
@@ -95,8 +108,20 @@
         rect = CGPDFPageGetBoxRect( page1, kCGPDFCropBox );
 
         CGPDFDocumentRelease( pdf );
+
+        int rotate = CGPDFPageGetRotationAngle(page1);
+        switch (rotate) {
+            case 90:
+            case 270:
+            case -90:
+                return CGRectMake(rect.origin.x, rect.origin.y, rect.size.height, rect.size.width);
+                break;
+            default:
+                return rect;
+                // for 0, 180, -180
+        }
     }
-    
+
     return rect;
 }
 
@@ -153,14 +178,9 @@
         }
         
 		CGPDFPageRef page1 = CGPDFDocumentGetPage( pdf, page );
-        
-		CGRect mediaRect = CGPDFPageGetBoxRect( page1, kCGPDFCropBox );
-		CGContextScaleCTM( ctx, size.width / mediaRect.size.width, size.height / mediaRect.size.height );
-		CGContextTranslateCTM( ctx, -mediaRect.origin.x, -mediaRect.origin.y );
-        
-		CGContextDrawPDFPage( ctx, page1 );
+
+        [PDFPageRenderer renderPage:page1 inContext:ctx inRectangle:CGRectMake(0, 0, size.width, size.height)];
 		CGPDFDocumentRelease( pdf );
-        
     }
 }
 

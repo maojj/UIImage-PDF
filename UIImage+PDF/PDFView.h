@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PDFPageRenderer.h"
 
 
 @interface PDFView : UIView 

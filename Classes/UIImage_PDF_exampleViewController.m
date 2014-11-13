@@ -50,9 +50,9 @@
 	{
 		/* Always round up coordinates before passing them into UIKit
 		 */
-		CGFloat imageWidth = ceilf( 22 * sqrtf( i + 1 ));
+		CGFloat imageWidth = ceilf( 100 * sqrtf( i + 1 ));
 		CGSize imageSize = CGSizeMake( imageWidth, imageWidth );
-        UIImage *image = [ UIImage imageWithPDFNamed:@"YingYang.pdf" atSize:imageSize ];
+        UIImage *image = [ UIImage imageWithPDFNamed:@"Test2.pdf" atHeight:imageSize.height];
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, imageY, imageSize.width, imageSize.height)];
         imageView.image = image;

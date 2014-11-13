@@ -11,6 +11,12 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		20FDB4E81A14BE4E00D5E627 /* PDFPageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FDB4E71A14BE4E00D5E627 /* PDFPageRenderer.m */; };
+		20FDB4EE1A14BE7600D5E627 /* Test1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20FDB4E91A14BE7600D5E627 /* Test1.pdf */; };
+		20FDB4EF1A14BE7600D5E627 /* Test2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20FDB4EA1A14BE7600D5E627 /* Test2.pdf */; };
+		20FDB4F01A14BE7600D5E627 /* Test3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20FDB4EB1A14BE7600D5E627 /* Test3.pdf */; };
+		20FDB4F11A14BE7600D5E627 /* Test4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20FDB4EC1A14BE7600D5E627 /* Test4.pdf */; };
+		20FDB4F21A14BE7600D5E627 /* Test5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 20FDB4ED1A14BE7600D5E627 /* Test5.pdf */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2899E5220DE3E06400AC0155 /* UIImage_PDF_exampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* UIImage_PDF_exampleViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
@@ -31,6 +37,13 @@
 		1D3623250D0F684500981E51 /* UIImage_PDF_exampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImage_PDF_exampleAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* UIImage+PDF example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIImage+PDF example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		20FDB4E61A14BE4E00D5E627 /* PDFPageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFPageRenderer.h; sourceTree = "<group>"; };
+		20FDB4E71A14BE4E00D5E627 /* PDFPageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFPageRenderer.m; sourceTree = "<group>"; };
+		20FDB4E91A14BE7600D5E627 /* Test1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test1.pdf; sourceTree = "<group>"; };
+		20FDB4EA1A14BE7600D5E627 /* Test2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test2.pdf; sourceTree = "<group>"; };
+		20FDB4EB1A14BE7600D5E627 /* Test3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test3.pdf; sourceTree = "<group>"; };
+		20FDB4EC1A14BE7600D5E627 /* Test4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test4.pdf; sourceTree = "<group>"; };
+		20FDB4ED1A14BE7600D5E627 /* Test5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Test5.pdf; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2899E5210DE3E06400AC0155 /* UIImage_PDF_exampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIImage_PDF_exampleViewController.xib; sourceTree = "<group>"; };
 		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -114,6 +127,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				20FDB4E91A14BE7600D5E627 /* Test1.pdf */,
+				20FDB4EA1A14BE7600D5E627 /* Test2.pdf */,
+				20FDB4EB1A14BE7600D5E627 /* Test3.pdf */,
+				20FDB4EC1A14BE7600D5E627 /* Test4.pdf */,
+				20FDB4ED1A14BE7600D5E627 /* Test5.pdf */,
 				A6685B3A1449CC1C006A3A42 /* YingYang.pdf */,
 				2899E5210DE3E06400AC0155 /* UIImage_PDF_exampleViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -135,6 +153,8 @@
 		A6685B161449C642006A3A42 /* UIImage+PDF */ = {
 			isa = PBXGroup;
 			children = (
+				20FDB4E61A14BE4E00D5E627 /* PDFPageRenderer.h */,
+				20FDB4E71A14BE4E00D5E627 /* PDFPageRenderer.m */,
 				A60041BD1779A5C500128861 /* NSData+MD5.h */,
 				A60041BE1779A5C500128861 /* NSData+MD5.m */,
 				A6CF4D5D15384D12000AA6BB /* NSString+MD5.h */,
@@ -208,9 +228,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20FDB4EE1A14BE7600D5E627 /* Test1.pdf in Resources */,
+				20FDB4EF1A14BE7600D5E627 /* Test2.pdf in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				E969166119DC7713006942BF /* MainStoryboard.storyboard in Resources */,
+				20FDB4F21A14BE7600D5E627 /* Test5.pdf in Resources */,
+				20FDB4F01A14BE7600D5E627 /* Test3.pdf in Resources */,
 				2899E5220DE3E06400AC0155 /* UIImage_PDF_exampleViewController.xib in Resources */,
+				20FDB4F11A14BE7600D5E627 /* Test4.pdf in Resources */,
 				A6685B3B1449CC1C006A3A42 /* YingYang.pdf in Resources */,
 				A6CF4D6215384D68000AA6BB /* MainWindow-iPad.xib in Resources */,
 			);
@@ -227,6 +252,7 @@
 				1D3623260D0F684500981E51 /* UIImage_PDF_exampleAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* UIImage_PDF_exampleViewController.m in Sources */,
 				A6685B1D1449C642006A3A42 /* PDFView.m in Sources */,
+				20FDB4E81A14BE4E00D5E627 /* PDFPageRenderer.m in Sources */,
 				A6685B1E1449C642006A3A42 /* UIImage+PDF.m in Sources */,
 				A6685B1F1449C642006A3A42 /* UIView+Image.m in Sources */,
 				A6CF4D5F15384D12000AA6BB /* NSString+MD5.m in Sources */,

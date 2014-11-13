@@ -302,26 +302,21 @@ static BOOL _shouldCacheOnDisk = YES;
     {
         pdfImage = [ UIImage imageWithCGImage:[[ UIImage imageWithContentsOfFile:cacheFilename ] CGImage ] scale:screenScale orientation:UIImageOrientationUp ];
     }
-    else 
+    else
     {
-        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-        CGContextRef ctx = CGBitmapContextCreate(NULL, size.width * screenScale, size.height * screenScale, 8, 0, colorSpace, kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedFirst);
-        CGContextScaleCTM(ctx, screenScale, screenScale);
-        
+        UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+        CGContextRef ctx = UIGraphicsGetCurrentContext();
         [PDFView renderIntoContext:ctx url:URL data:nil size:size page:page];
-        CGImageRef image = CGBitmapContextCreateImage(ctx);
-        pdfImage = [[UIImage alloc] initWithCGImage:image scale:screenScale orientation:UIImageOrientationUp];
-        
-        CGImageRelease(image);
-        CGContextRelease(ctx);
-        CGColorSpaceRelease(colorSpace);
-        
+
+        pdfImage = UIGraphicsGetImageFromCurrentImageContext();
+
+        UIGraphicsEndImageContext();
         if(_shouldCacheOnDisk && cacheFilename)
         {
             [ UIImagePNGRepresentation( pdfImage ) writeToFile:cacheFilename atomically:NO ];
         }
     }
-    
+
     /**
      * Cache image to in memory if active
      */
